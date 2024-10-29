@@ -24,7 +24,7 @@ document.getElementById('loginForm').addEventListener('submit', async (event) =>
     const username = document.getElementById('loginUsername').value;
     const password = document.getElementById('loginPassword').value;
 
-    const response = await fetch('https://ton-url-render.com/api/login', {
+    const response = await fetch('https://textia-serv.onrender.com/api/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ document.getElementById('postForm').addEventListener('submit', async (event) => 
     const content = document.getElementById('postContent').value;
     const user_id = localStorage.getItem('user_id');  // Récupère l'ID de l'utilisateur
 
-    const response = await fetch('https://ton-url-render.com/api/posts', {
+    const response = await fetch('https://https://textia-serv.onrender.com/api/posts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
