@@ -5,7 +5,7 @@ document.getElementById('registerForm').addEventListener('submit', async (event)
     const username = document.getElementById('registerUsername').value;
     const password = document.getElementById('registerPassword').value;
 
-    const response = await fetch('https://ton-url-render.com/api/register', {
+    const response = await fetch('https://textia-serv.onrender.com/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
