@@ -4,26 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Textia</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenue sur Textia</h1>
+    <h1>Textia - Réseau Social</h1>
 
     <h2>Inscription</h2>
-    <form id="register-form">
-        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-        <input type="password" name="password" placeholder="Mot de passe" required>
+    <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="registerPassword" placeholder="Mot de passe" required>
         <button type="submit">S'inscrire</button>
     </form>
 
     <h2>Connexion</h2>
-    <form id="login-form">
-        <input type="text" name="username" placeholder="Nom d'utilisateur" required>
-        <input type="password" name="password" placeholder="Mot de passe" required>
+    <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Nom d'utilisateur" required>
+        <input type="password" id="loginPassword" placeholder="Mot de passe" required>
         <button type="submit">Se connecter</button>
     </form>
 
-    <div id="message"></div>
     <script src="script.js"></script>
 </body>
 </html>
