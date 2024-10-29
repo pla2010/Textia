@@ -1,33 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Fonction d'inscription
-    document.getElementById('register-form').onsubmit = async (e) => {
-        e.preventDefault();
-        const username = e.target.username.value;
-        const password = e.target.password.value;
+document.getElementById('registerForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-        const response = await fetch('/api/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
-        });
+    const username = document.getElementById('registerUsername').value;
+    const password = document.getElementById('registerPassword').value;
 
-        const result = await response.json();
-        document.getElementById('message').textContent = result.message;
-    };
+    const response = await fetch('https://ton-url-render.com/api/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+    });
 
-    // Fonction de connexion
-    document.getElementById('login-form').onsubmit = async (e) => {
-        e.preventDefault();
-        const username = e.target.username.value;
-        const password = e.target.password.value;
+    const data = await response.json();
+    alert(data.message);
+});
 
-        const response = await fetch('/api/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
-        });
+document.getElementById('loginForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
 
-        const result = await response.json();
-        document.getElementById('message').textContent = result.message;
-    };
+    const username = document.getElementById('loginUsername').value;
+    const password = document.getElementById('loginPassword').value;
+
+    const response = await fetch('https://ton-url-render.com/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+    });
+
+    const data = await response.json();
+    alert(data.message);
 });
